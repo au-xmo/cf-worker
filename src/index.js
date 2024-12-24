@@ -87,7 +87,9 @@ export default {
 						},
 					});
 				}
-			} 
+			} else {
+				return new Response("Resource can't be found", { status: 404 });
+			}
 		} catch (err) {			
 			return new Response(err, { status: 500 });
 	  	}
